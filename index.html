@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Cache Sample</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, sans-serif;
+        color: #172033;
+        background: #f4f6fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 3rem 1.25rem;
+      }
+
+      main {
+        width: min(100%, 960px);
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+      }
+
+      .intro {
+        margin: 0 0 2rem;
+        color: #596579;
+      }
+
+      form,
+      .image-card {
+        padding: 1rem;
+        border: 1px solid #e0e5ef;
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      form {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      input {
+        flex: 1;
+        min-width: 0;
+        padding: 0.75rem;
+        border: 1px solid #cbd3e1;
+        border-radius: 8px;
+        font: inherit;
+      }
+
+      button {
+        padding: 0.75rem 1rem;
+        border: 0;
+        border-radius: 8px;
+        color: #fff;
+        background: #3559d8;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .image-card img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 8px;
+        background: #e8edf7;
+      }
+
+      .image-card h2 {
+        margin: 0.85rem 0 0.25rem;
+        font-size: 1rem;
+      }
+
+      .image-card p {
+        margin: 0;
+        color: #69758a;
+        font-size: 0.875rem;
+      }
+
+      @media (max-width: 520px) {
+        body {
+          padding-top: 2rem;
+        }
+
+        form {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Image Cache Sample</h1>
+      <p class="intro">A simple UI template for testing image loading and cache behavior.</p>
+
+      <form aria-label="Add an image">
+        <input type="url" aria-label="Image URL" placeholder="Enter an image URL">
+        <button type="button">Load image</button>
+      </form>
+
+      <section class="image-grid" aria-label="Sample images">
+        <article class="image-card">
+          <img
+            alt="Abstract blue sample image"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23c9dcff'/%3E%3Ccircle cx='200' cy='150' r='82' fill='%233559d8'/%3E%3C/svg%3E">
+          <h2>Sample image 1</h2>
+          <p>Ready for your image-loading method</p>
+        </article>
+        <article class="image-card">
+          <img
+            alt="Abstract green sample image"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d3f0e2'/%3E%3Cpath d='M0 220 130 90l95 95 70-70 105 105v80H0z' fill='%232d9669'/%3E%3C/svg%3E">
+          <h2>Sample image 2</h2>
+          <p>Ready for your image-loading method</p>
+        </article>
+        <article class="image-card">
+          <img
+            alt="Abstract orange sample image"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23ffe0bf'/%3E%3Ccircle cx='200' cy='150' r='82' fill='%23eb8736'/%3E%3C/svg%3E">
+          <h2>Sample image 3</h2>
+          <p>Ready for your image-loading method</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
